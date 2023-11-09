@@ -1,0 +1,41 @@
+@import '../../assets/variables';
+
+.login{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: $background-color;
+  min-height: 100vh;
+
+  .icon{
+    display: flex;
+    height: 40px;
+    align-self: center;
+  }
+
+  aside{
+    display: flex;
+    padding: 40px;
+    gap: 20px;
+    flex-direction: row;
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .signupOption{
+      display: flex;
+      flex-direction: row;
+      padding: 30px;
+      gap: 20px;
+
+      .linkRoute{
+        text-decoration: none;
+      }
+    }
+  }
+
+}

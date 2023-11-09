@@ -1,0 +1,10 @@
+@import 'src/assets/variables';
+
+.news {
+  background-color: $component-background-color;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 200px;
+  padding: 10px;
+}

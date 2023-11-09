@@ -1,0 +1,58 @@
+@import '../../assets/variables';
+
+.navbar {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+  color: $dark-grey;
+
+  img {
+    width: 40px;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+
+    input {
+      background-color: $search-background;
+      border: 0;
+      border-radius: 4px;
+      background-image: url('../../../public/images/icons8-search-30.png');
+      background-position: 10px 10px;
+      background-size: 23px;
+      background-repeat: no-repeat;
+      padding-left: 40px;
+      height: 40px;
+      width: 200px;
+    }
+
+  }
+
+  &Icons {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+
+    .linkRoute{
+      text-decoration: none;
+      color: $grey;
+    }
+
+    .eachIcon {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .iconImg {
+      font-size: 25px;
+      color: $dark-grey;
+    }
+  }
+}

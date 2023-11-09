@@ -1,0 +1,59 @@
+@import 'src/assets/variables';
+.newPost {
+  background-color: $component-background-color;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 600px;
+  padding: 10px;
+  gap: 20px;
+  font-size: 18px;
+  color: $dark-grey;
+
+  &Form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    
+    .profileImage {
+      background-color: $soft-grey;
+      border: 1px solid $white;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+    }
+  
+    .form {
+      border: 1px solid $soft-grey;
+      border-radius: 100px;
+      width: 80%;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      font-size: 16px;
+      box-sizing: border-box;
+      resize: none;      
+    }
+
+    .form:hover{
+      background-color: $background-color;
+    }
+
+    .form:focus{
+      outline: none
+    }
+  }
+
+  &Options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+}
+
+
+
+

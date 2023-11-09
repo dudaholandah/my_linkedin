@@ -1,0 +1,10 @@
+@import '../../assets/variables';
+
+.profilePhoto{
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  border-radius: 100%;
+  border: 4px solid $white;
+}

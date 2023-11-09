@@ -1,0 +1,61 @@
+@import 'src/assets/variables';
+
+.timeline{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+
+  .card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: $component-background-color;
+    width: 500px;
+    margin-bottom: 20px;
+    width: 100%; 
+  
+    &Text, &Image{
+      padding: 10px;
+    }
+  
+    &Video, &Image{
+      width: 90%;
+    }
+
+    .informationsBar{
+      display:flex;
+      justify-content: space-between;
+      width:100%;
+      background-color: $soft-grey;
+      border-radius: 10px 10px 0px 0px;
+
+      .icon{
+        display: flex;
+        align-self: center;
+        padding-left: 15px;
+      }
+
+      .topRight{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-right: 5%;
+        gap: 10px;
+        background-color: transparent;
+      }
+
+    }
+
+    .postOptions{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px 0px 20px 0px;
+    }
+
+  }
+
+}

@@ -1,0 +1,12 @@
+@import "../../assets/variables";
+
+.profile, html{
+  background-color: $background-color;
+}
+
+.main{  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+}    
