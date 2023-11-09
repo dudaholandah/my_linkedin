@@ -6,9 +6,45 @@ import ButtonIcons from '../../../components/ui/Button/ButtonIcons';
 import * as Icons from '@fortawesome/free-solid-svg-icons'
 import config from '../../../config/config';
 import ProfilePhoto from '../../../components/ProfilePhoto';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 function Post(){
   
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+
+    fetch('scrapper.json', {
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    })
+    .then((response) => response.json())
+    .then((json) => {
+
+      var auxPost = []
+
+      for(var i=0; i<Object.keys(json).length; i++){
+        auxPost.push({
+          'text': json['text'][i],
+          'links': json['links'][i],
+          'link_type': json['link_type'][i]
+        }) 
+      }
+
+      console.log(auxPost)
+
+      setPosts(auxPost)
+
+    }    
+    )
+
+    
+
+  }, [])
+
   function body(post){
     return (
       <div>
@@ -17,13 +53,9 @@ function Post(){
           {post.text}
         </div>}
 
-        {post.image !== "" && 
-        <img className={styles.cardImage} alt='opus' width="100%" src={post.image}/>}
-
-        {post.video !== "" &&
-        <video className={styles.cardVideo} controls >
-          <source src={post.video} type="video/mp4"/>
-        </video>}
+        {(post.link_type === "Photo" || post.link_type === "Celebration") && 
+          post.links.map((img) => <img className={styles.cardImage} alt='opus' width="100%" src={img}/>)
+        }
       </div>
     )
   }
@@ -37,8 +69,8 @@ function Post(){
           <div className={styles.icon}> < ProfilePhoto size="50px"/> </div>
 
           <div className={styles.informations}>
-            <div> <strong>{post.name}</strong> </div>
-            <div> {post.role} </div>
+            <div> <strong>{Constants.PROFILE_INFOS.nome}</strong> </div>
+            <div> {Constants.PROFILE_INFOS.cargo_minimal} </div>
           </div>
         
           <div className={styles.topRight}>
@@ -60,7 +92,7 @@ function Post(){
 
   return(
     <div className={styles.timeline}>
-      { Constants.POSTS_EXAMPLE.map((post) => renderCard(post))}
+      {posts.map(post => renderCard(post))}
     </div>
   );
 }

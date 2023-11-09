@@ -118,5 +118,6 @@ export const NOTIFICATION_EXAMPLES = [
 export const PROFILE_INFOS = {
   nome: "Maria Eduarda Machado de Holanda",
   cargo: "Software Engineer | React | Angular | Spring Boot | Python | HTML/CSS",
+  cargo_minimal: "Software Engineer",
   local: "Brasília, Distrito Federal, Brasil."
 }

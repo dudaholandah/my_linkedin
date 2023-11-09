@@ -27,9 +27,9 @@ function Navbar(){
           <div className="eachIcon"><FontAwesomeIcon icon={faUser} className="iconImg" />Perfil</div>
         </Link>
 
-        <Link to="/" className="linkRoute">
+        {/* <Link to="/" className="linkRoute">
           <div className="eachIcon"><FontAwesomeIcon icon={faSignOut} className="iconImg" />&nbsp;&nbsp;Sair&nbsp;&nbsp;</div>
-        </Link>
+        </Link> */}
 
       </div>
 
